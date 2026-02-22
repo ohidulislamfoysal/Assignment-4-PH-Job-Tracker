@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PH Job Tracker</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <style>
+        *{
+            font-family: "Geist", sans-serif;
+        }
+    </style>
 </head>
-<body>
-    
+<body class="min-h-screen max-w-6xl mx-auto pt-15">
+    <header>
+            <h1 class=" text-3xl text-[#002C5C] font-bold mb-5">Job Application Tracker</h1>
+            <div class="grid grid-cols-3 w-full gap-4">
+            <div class="bg-[#F8FAFC] rounded-lg p-5 shadow"><p class="text-[#323B49] text-[14px]">Total</p>
+                <span class="text-[#002C5C] font-bold text-2xl">8</span></div>
+            <div class="bg-[#F8FAFC] rounded-lg p-5 shadow"><p class="text-[#323B49] text-[14px]">Interview</p>
+                <span class="text-[#10B981] font-bold text-2xl">0</span></div>
+            <div class="bg-[#F8FAFC] rounded-lg p-5 shadow"><p class="text-[#323B49] text-[14px]">Rejected</p>
+            <span class="text-[#EF4444] font-bold text-2xl">0</span></div>
+            </div>
+    </header>
+    <hr class="text-[#E6E7E9] mt-7 mb-7">
+    <h2 class="text-[#002C5C] font-semibold text-2xl ">Available Jobs</h2>
 </body>
 </html>
