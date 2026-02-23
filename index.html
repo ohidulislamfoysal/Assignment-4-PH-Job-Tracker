@@ -17,27 +17,27 @@
         }
     </style>
 </head>
-<body class="min-h-screen max-w-6xl mx-auto pt-15">
+<body class="min-h-screen max-w-6xl mx-auto pt-15 pl-4 pr-4">
     <header>
             <h1 class=" text-3xl text-[#002C5C] font-bold mb-5">Job Application Tracker</h1>
-            <div class="grid grid-cols-3 w-full gap-4">
+            <div class="grid max-sm:grid-cols-1 grid-cols-3 w-full gap-4">
             <div class="bg-[#F8FAFC] rounded-lg p-5 shadow"><p class="text-[#323B49] text-[14px]">Total</p>
-                <span class="text-[#002C5C] font-bold text-2xl">0</span></div>
+                <span id="total" class="text-[#002C5C] font-bold text-2xl">0</span></div>
             <div class="bg-[#F8FAFC] rounded-lg p-5 shadow"><p class="text-[#323B49] text-[14px]">Interview</p>
-                <span class="text-[#10B981] font-bold text-2xl">0</span></div>
+                <span id="interview" class="text-[#10B981] font-bold text-2xl">0</span></div>
             <div class="bg-[#F8FAFC] rounded-lg p-5 shadow"><p class="text-[#323B49] text-[14px]">Rejected</p>
-            <span class="text-[#EF4444] font-bold text-2xl">0</span></div>
+            <span id="rejected" class="text-[#EF4444] font-bold text-2xl">0</span></div>
             </div>
     </header>
     <hr class="text-[#E6E7E9] mt-7 mb-7">
     <h2 class="text-[#002C5C] font-semibold text-2xl mb-6">Available Jobs</h2>
-    <section>
-        <div class="flex space-x-2 mb-4">
-            <button class="px-4 py-2 rounded font-[12px] bg-[#3B82F6] text-white w-28">All</button>
-            <button class="px-4 py-2 rounded font-[12px] bg-white  border-gray-300 hover:bg-gray-100">Interview</button>
-            <button class="px-4 py-2 rounded font-[12px] bg-white  border-gray-300 hover:bg-gray-100">Rejected</button>
+    
+        <main>
+            <div class="flex space-x-2 mb-4">
+            <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="px-4 py-2 rounded font-[12px] bg-[#3B82F6] text-white w-28">All</button>
+            <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="px-4 py-2 rounded font-[12px] bg-white border-gray-300 hover:bg-gray-100 ">Interview</button>
+            <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="px-4 py-2 rounded font-[12px] bg-white border-gray-300 hover:bg-gray-100 ">Rejected</button>
         </div>
-    </section>
     <section id="allCards" class="space-y-4 mb-15">
         <div id="card-1" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
             <div >
@@ -169,5 +169,7 @@
         </div>
         
     </section>
+        </main>
+    <script src="./script/script.js"></script>
 </body>
 </html>
