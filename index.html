@@ -38,6 +38,10 @@
             <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="px-4 py-2 rounded font-[12px] bg-white border-gray-300 hover:bg-gray-100 ">Interview</button>
             <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="px-4 py-2 rounded font-[12px] bg-white border-gray-300 hover:bg-gray-100 ">Rejected</button>
         </div>
+    <!-- Filtered Cards -->
+     <section id="filtered-section" class="hidden">
+
+     </section>
     <section id="allCards" class="space-y-4 mb-15">
         <div id="card-1" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
             <div >
@@ -47,12 +51,12 @@
                 <button class="status-btn text-[#002C5C] bg-[#EEF4FF] p-2 rounded-lg text-[14px] font-semibold">NOT APPLIED</button>
                 <p class="jobDetails text-[#323B49] text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 <div class="gap-2 pt-5">
-                    <button class="btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
-                    <button class="btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
+                    <button class="btn interview-btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
+                    <button class="btn rejected-btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
                 </div>
             </div>
             <div class="absolute top-8 right-6">
-                <button class="btn border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
+                <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
         <div id="card-2" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
@@ -63,12 +67,12 @@
                 <button class="status-btn text-[#002C5C] bg-[#EEF4FF] p-2 rounded-lg text-[14px] font-semibold">NOT APPLIED</button>
                 <p class="jobDetails text-[#323B49] text-[14px]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                 <div class="gap-2 pt-5">
-                <button class="btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
-                <button class="btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
+                <button class="btn interview-btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
+                <button class="btn rejected-btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
                 </div>
             </div>
             <div class="absolute top-8 right-6">
-                <button class="btn border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
+                <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
         <div id="card-3" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
@@ -79,12 +83,12 @@
                 <button class="status-btn text-[#002C5C] bg-[#EEF4FF] p-2 rounded-lg text-[14px] font-semibold">NOT APPLIED</button>
                 <p class="jobDetails text-[#323B49] text-[14px]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
                 <div class="gap-2 pt-5">
-                <button class="btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
-                <button class="btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
+                <button class="btn interview-btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
+                <button class="btn rejected-btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
                 </div>
             </div>
             <div class="absolute top-8 right-6">
-                <button class="btn border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
+                <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
         <div id="card-4" class="bg-[#F1F2F4] p-6 rounded-lg flex relative ">
@@ -95,12 +99,12 @@
                 <button class="status-btn text-[#002C5C] bg-[#EEF4FF] p-2 rounded-lg text-[14px] font-semibold">NOT APPLIED</button>
                 <p class="jobDetails text-[#323B49] text-[14px]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                 <div class="gap-2 pt-5">
-                <button class="btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
-                <button class="btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
+                <button class="btn interview-btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
+                <button class="btn rejected-btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
                 </div>
             </div>
             <div class="absolute top-8 right-6">
-                <button class="btn border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
+                <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
         <div id="card-5" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
@@ -111,12 +115,12 @@
                 <button class="status-btn text-[#002C5C] bg-[#EEF4FF] p-2 rounded-lg text-[14px] font-semibold">NOT APPLIED</button>
                 <p class="jobDetails text-[#323B49] text-[14px]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                 <div class="gap-2 pt-5">
-                <button class="btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
-                <button class="btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
+                <button class="btn interview-btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
+                <button class="btn rejected-btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
                 </div>
             </div>
             <div class="absolute top-8 right-6">
-                <button class="btn border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
+                <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
         <div id="card-6" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
@@ -127,12 +131,12 @@
                 <button class="status-btn text-[#002C5C] bg-[#EEF4FF] p-2 rounded-lg text-[14px] font-semibold">NOT APPLIED</button>
                 <p class="jobDetails text-[#323B49] text-[14px]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                 <div class="gap-2 pt-5">
-                    <button class="btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
-                    <button class="btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
+                    <button class="btn interview-btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
+                    <button class="btn rejected-btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
                 </div>
             </div>
             <div class="absolute top-8 right-6">
-                <button class="btn border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
+                <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
         <div id="card-7" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
@@ -143,12 +147,12 @@
                 <button class="status-btn text-[#002C5C] bg-[#EEF4FF] p-2 rounded-lg text-[14px] font-semibold">NOT APPLIED</button>
                 <p class="jobDetails text-[#323B49] text-[14px]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included..</p>
                 <div class="gap-2 pt-5">
-                <button class="btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
-                <button class="btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
+                <button class="btn interview-btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
+                <button class="btn rejected-btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
                 </div>
             </div>
             <div class="absolute top-8 right-6">
-                <button class="btn border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
+                <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
         <div id="card-8" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
@@ -159,12 +163,12 @@
                 <button class="status-btn text-[#002C5C] bg-[#EEF4FF] p-2 rounded-lg text-[14px] font-semibold">NOT APPLIED</button>
                 <p class="jobDetails text-[#323B49] text-[14px]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                 <div class="gap-2 pt-5">
-                <button class="btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
-                <button class="btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
+                <button class="btn interview-btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
+                <button class="btn rejected-btn border border-red-500 text-red-500 font-bold text-[14px]">REJECTED</button>
                 </div>
             </div>
             <div class="absolute top-8 right-6">
-                <button class="btn border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
+                <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
         
