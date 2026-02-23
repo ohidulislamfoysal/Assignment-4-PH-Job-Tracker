@@ -56,8 +56,19 @@ function toggleStyle(id){
 
 mainContainer.addEventListener('click',function(event){
 
+    if(event.target.classList.contains('delete')){
+       const parentNode=event.target.parentNode.parentNode;
+       const companyName = parentNode.querySelector('.companyName').innerText
+       interviewList = interviewList.filter(item => item.companyName !== companyName);
+        rejectedList = rejectedList.filter(item => item.companyName !== companyName);
+       parentNode.remove();
+       calTotalCount()
+       renderIntrview()
+       renderRejected()
+    }
+
     if(event.target.classList.contains('interview-btn')){
-        const parentNode = event.target.parentNode.parentNode;
+    const parentNode = event.target.parentNode.parentNode;
     const companyName = parentNode.querySelector('.companyName').innerText
     const jobTittle = parentNode.querySelector('.jobTittle').innerText
     const salary = parentNode.querySelector('.salary').innerText
