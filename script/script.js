@@ -34,3 +34,25 @@ function toggleStyle(id){
     selected.classList.add('bg-[#3B82F6]','text-white')
 
 }
+
+mainContainer.addEventListener('click',function(event){
+    // console.log(event.target.parentNode.parentNode);
+    const parentNode = event.target.parentNode.parentNode;
+    const companyName = parentNode.querySelector('.companyName').innerText
+    const jobTittle = parentNode.querySelector('.jobTittle').innerText
+    const salary = parentNode.querySelector('.salary').innerText
+    const statusBtn = parentNode.querySelector('.status-btn').innerText
+    const jobDetails = parentNode.querySelector('.jobDetails').innerText
+
+    const cardInfo = {
+        companyName,
+        jobTittle,
+        salary,
+        statusBtn,
+        jobDetails
+    }
+    const companyExist = interviewList.find(item=> item.companyName == cardInfo.companyName)
+    if(!companyExist){
+        interviewList.push(cardInfo)
+    }
+})
