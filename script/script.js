@@ -18,7 +18,7 @@ console.log(mainContainer);
 // Counting function
 function calTotalCount(){
     total.innerText = allCardSection.children.length
-    interviewList.innerText = interviewList.length
+    interview.innerText = interviewList.length
     rejectedList.innerText = rejectedList.length
 }
 calTotalCount()
@@ -68,6 +68,7 @@ mainContainer.addEventListener('click',function(event){
     if(!companyExist){
         interviewList.push(cardInfo)
     }
+    calTotalCount()
     renderIntrview()
     }
     
