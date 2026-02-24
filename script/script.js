@@ -109,8 +109,11 @@ mainContainer.addEventListener('click',function(event){
     const jobTittle = parentNode.querySelector('.jobTittle').innerText
     const salary = parentNode.querySelector('.salary').innerText
     const statusBtn = parentNode.querySelector('.status-btn').innerText
+    console.log(statusBtn)
     const jobDetails = parentNode.querySelector('.jobDetails').innerText
     parentNode.querySelector('.status-btn').innerText = 'Interview'
+    parentNode.querySelector('.status-btn').classList.remove('text-red-400' ,'border','border-red-500')
+    parentNode.querySelector('.status-btn').classList.add('text-green-400' ,'border','border-green-500')
     const cardInfo = {
         companyName,
         jobTittle,
@@ -137,6 +140,9 @@ mainContainer.addEventListener('click',function(event){
     const jobTittle = parentNode.querySelector('.jobTittle').innerText
     const salary = parentNode.querySelector('.salary').innerText
     const statusBtn = parentNode.querySelector('.status-btn').innerText
+    
+    parentNode.querySelector('.status-btn').classList.remove('text-green-400' ,'border','border-green-500')
+    parentNode.querySelector('.status-btn').classList.add('text-red-400' ,'border','border-red-500')
     const jobDetails = parentNode.querySelector('.jobDetails').innerText
     parentNode.querySelector('.status-btn').innerText = 'Rejected'
     const cardInfo = {
