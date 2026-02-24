@@ -176,7 +176,7 @@ function renderIntrview(){
                 <h2 class="companyName text-[#002C5C] font-semibold text-[18px]">${interview.companyName}</h2>
                 <h3 class="jobTittle text-[#64748B] text-[16px]">${interview.jobTittle}</h3>
                 <p class="salary text-[#64748B] text-[14px]">${interview.salary}</p>
-                <button class="status-btn text-[#002C5C] bg-[#EEF4FF] p-2 rounded-lg text-[14px] font-semibold">${interview.statusBtn}</button>
+                <button class="status-btn text-green-400 border border-green-500 p-2 rounded-lg text-[14px] font-semibold">${interview.statusBtn}</button>
                 <p class="jobDetails text-[#323B49] text-[14px]">${interview.jobDetails}</p>
                 <div class="gap-2 pt-5">
                     <button class="btn interview-btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
@@ -201,7 +201,7 @@ function renderRejected(){
                 <h2 class="companyName text-[#002C5C] font-semibold text-[18px]">${rejected.companyName}</h2>
                 <h3 class="jobTittle text-[#64748B] text-[16px]">${rejected.jobTittle}</h3>
                 <p class="salary text-[#64748B] text-[14px]">${rejected.salary}</p>
-                <button class="status-btn text-[#002C5C] bg-[#EEF4FF] p-2 rounded-lg text-[14px] font-semibold">${rejected.statusBtn}</button>
+                <button class="status-btn text-red-400 border border-red-500  p-2 rounded-lg text-[14px] font-semibold">${rejected.statusBtn}</button>
                 <p class="jobDetails text-[#323B49] text-[14px]">${rejected.jobDetails}</p>
                 <div class="gap-2 pt-5">
                     <button class="btn interview-btn border border-green-500 text-green-500 font-bold text-[14px]">INTERVIEW</button>
