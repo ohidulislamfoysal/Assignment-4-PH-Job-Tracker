@@ -5,6 +5,7 @@ let currentState= 'all'
 let total = document.getElementById('total');
 let interview = document.getElementById('interview');
 let rejected = document.getElementById('rejected');
+let total2 = document.getElementById('total2');
 
 const allFilterBtn = document.getElementById('all-filter-btn');
 const interviewFilterBtn = document.getElementById('interview-filter-btn');
@@ -20,6 +21,7 @@ console.log(mainContainer);
 // Counting function
 function calTotalCount(){
     total.innerText = allCardSection.children.length
+    total2.innerText = allCardSection.children.length
     interview.innerText = interviewList.length
     rejected.innerText = rejectedList.length
 }
