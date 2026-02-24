@@ -17,7 +17,6 @@ const filterSection = document.getElementById('filtered-section')
 const allCardSection = document.getElementById('allCards');
 
 const mainContainer = document.querySelector('main');
-console.log(mainContainer);
 // Counting function
 function calTotalCount(){
     total.innerText = allCardSection.children.length
@@ -60,6 +59,7 @@ function toggleStyle(id){
     
 
 }
+// No Job Function
 function noJobAvailable(){
     if(currentState == 'interview-filter-btn'){
         if(interviewList.length===0){
@@ -130,7 +130,6 @@ mainContainer.addEventListener('click',function(event){
     }
     calTotalCount()
     noJobAvailable()
-    // renderIntrview()
     }
     else if(event.target.classList.contains('rejected-btn')){
         const parentNode = event.target.parentNode.parentNode;
