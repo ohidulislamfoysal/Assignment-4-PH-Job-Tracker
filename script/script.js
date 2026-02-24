@@ -78,7 +78,7 @@ function noJobAvailable(){
     }
     else {
         const totalCard = interviewList.length+rejectedList.length;
-        if(total.innerText===0){
+        if(totalCard===0){
             noJobSection.classList.add('hidden')
         }
         else{
