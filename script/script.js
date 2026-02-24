@@ -9,6 +9,7 @@ let rejected = document.getElementById('rejected');
 const allFilterBtn = document.getElementById('all-filter-btn');
 const interviewFilterBtn = document.getElementById('interview-filter-btn');
 const rejectedFilterBtn = document.getElementById('rejected-filter-btn');
+const noJobSection = document.getElementById('No-job-section')
 
 const filterSection = document.getElementById('filtered-section')
 
@@ -45,19 +46,51 @@ function toggleStyle(id){
     else if(id=='all-filter-btn'){
         filterSection.classList.add('hidden')
         allCardSection.classList.remove('hidden')
+
     }
     else if(id =='rejected-filter-btn'){
         allCardSection.classList.add('hidden')
         filterSection.classList.remove('hidden')
         renderRejected()
+        
     }
+    noJobAvailable()
+    
 
+}
+function noJobAvailable(){
+    if(currentState == 'interview-filter-btn'){
+        if(interviewList.length===0){
+            noJobSection.classList.remove('hidden')
+        }
+        else{
+            
+            noJobSection.classList.add('hidden')
+        }
+    }
+    else if(currentState === 'rejected-filter-btn'){
+        if(rejectedList.length===0){
+            noJobSection.classList.remove('hidden')
+        }
+        else{
+            noJobSection.classList.add('hidden')
+        }
+    }
+    else {
+        const totalCard = interviewList.length+rejectedList.length;
+        if(total.innerText===0){
+            noJobSection.classList.add('hidden')
+        }
+        else{
+            noJobSection.classList.add('hidden')
+        }
+    }
 }
 
 mainContainer.addEventListener('click',function(event){
-
-    if(event.target.classList.contains('delete')){
-       const parentNode=event.target.parentNode.parentNode;
+    const btn= event.target.closest('.delete')
+    if(btn){
+       const parentNode=event.target.closest('.card');
        const companyName = parentNode.querySelector('.companyName').innerText
        interviewList = interviewList.filter(item => item.companyName !== companyName);
         rejectedList = rejectedList.filter(item => item.companyName !== companyName);
@@ -65,6 +98,7 @@ mainContainer.addEventListener('click',function(event){
        calTotalCount()
        renderIntrview()
        renderRejected()
+       noJobAvailable()
     }
 
     if(event.target.classList.contains('interview-btn')){
@@ -93,6 +127,7 @@ mainContainer.addEventListener('click',function(event){
         renderRejected()
     }
     calTotalCount()
+    noJobAvailable()
     // renderIntrview()
     }
     else if(event.target.classList.contains('rejected-btn')){
@@ -121,6 +156,7 @@ mainContainer.addEventListener('click',function(event){
         renderIntrview()
     }
     calTotalCount()
+    noJobAvailable()
     }
     
 })
@@ -128,7 +164,7 @@ function renderIntrview(){
     filterSection.innerHTML= ''
     for(let interview of interviewList) {
         let div = document.createElement('div');
-        div.className = 'bg-[#F1F2F4] p-6 mb-4 rounded-lg flex relative'
+        div.className = 'card bg-[#F1F2F4] p-6 mb-4 rounded-lg flex relative'
         div.innerHTML = `<div >
                 <h2 class="companyName text-[#002C5C] font-semibold text-[18px]">${interview.companyName}</h2>
                 <h3 class="jobTittle text-[#64748B] text-[16px]">${interview.jobTittle}</h3>
@@ -153,7 +189,7 @@ function renderRejected(){
     filterSection.innerHTML= ''
     for(let rejected of rejectedList) {
         let div = document.createElement('div');
-        div.className = 'bg-[#F1F2F4] p-6 mb-4 rounded-lg flex relative'
+        div.className = 'card bg-[#F1F2F4] p-6 mb-4 rounded-lg flex relative'
         div.innerHTML = `<div >
                 <h2 class="companyName text-[#002C5C] font-semibold text-[18px]">${rejected.companyName}</h2>
                 <h3 class="jobTittle text-[#64748B] text-[16px]">${rejected.jobTittle}</h3>

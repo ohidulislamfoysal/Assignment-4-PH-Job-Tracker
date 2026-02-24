@@ -38,13 +38,22 @@
             <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="px-4 py-2 rounded font-[12px] bg-white border-gray-300 hover:bg-gray-100 ">Interview</button>
             <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="px-4 py-2 rounded font-[12px] bg-white border-gray-300 hover:bg-gray-100 ">Rejected</button>
         </div>
-    <!--Interview Filtered Cards -->
+    <!--Filtered Cards -->
      <section id="filtered-section" class="hidden">
 
      </section>
-     <section is=></section>
+     <!-- Nothing job available Section-->
+      <section id ="No-job-section" class="hidden">
+        <div class="w-full bg-[#F1F2F4] p-25 text-center space-y-2 rounded-lg ">
+            <div class="flex justify-center">
+                <img src="jobs.png" alt="No job available">
+            </div>
+            <h1 class="text-2xl text-[#002C5C] font-bold">No jobs available</h1>
+            <p>Check back soon for new job opportunities</p>
+        </div>
+      </section>
     <section id="allCards" class="space-y-4 mb-15">
-        <div id="card-1" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
+        <div id="card-1" class="card bg-[#F1F2F4] p-6 rounded-lg flex relative">
             <div >
                 <h2 class="companyName text-[#002C5C] font-semibold text-[18px]">Mobile First Corp</h2>
                 <h3 class="jobTittle text-[#64748B] text-[16px]">React Native Developer</h3>
@@ -60,7 +69,7 @@
                 <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
-        <div id="card-2" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
+        <div id="card-2" class="card bg-[#F1F2F4] p-6 rounded-lg flex relative">
             <div >
                 <h2 class="companyName text-[#002C5C] font-semibold text-[18px]">WebFlow Agency</h2>
                 <h3 class="jobTittle text-[#64748B] text-[16px]">Web Designer & Developer</h3>
@@ -76,7 +85,7 @@
                 <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
-        <div id="card-3" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
+        <div id="card-3" class="card bg-[#F1F2F4] p-6 rounded-lg flex relative">
             <div >
                 <h2 class="companyName text-[#002C5C] font-semibold text-[18px]">DataViz Solutions</h2>
                 <h3 class="jobTittle text-[#64748B] text-[16px]">Data Visualization Specialist</h3>
@@ -92,7 +101,7 @@
                 <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
-        <div id="card-4" class="bg-[#F1F2F4] p-6 rounded-lg flex relative ">
+        <div id="card-4" class="card bg-[#F1F2F4] p-6 rounded-lg flex relative ">
             <div >
                 <h2 class="companyName text-[#002C5C] font-semibold text-[18px]">CloudFirst Inc</h2>
                 <h3 class="jobTittle text-[#64748B] text-[16px]">Backend Developer</h3>
@@ -108,7 +117,7 @@
                 <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
-        <div id="card-5" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
+        <div id="card-5" class="card bg-[#F1F2F4] p-6 rounded-lg flex relative">
             <div >
                 <h2 class="companyName text-[#002C5C] font-semibold text-[18px]">Innovation Labs</h2>
                 <h3 class="jobTittle text-[#64748B] text-[16px]">UI/UX Engineer</h3>
@@ -124,7 +133,7 @@
                 <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
-        <div id="card-6" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
+        <div id="card-6" class="card bg-[#F1F2F4] p-6 rounded-lg flex relative">
             <div >
                 <h2 class="companyName text-[#002C5C] font-semibold text-[18px]">MegaCorp Solutions</h2>
                 <h3 class="jobTittle text-[#64748B] text-[16px]">JavaScript Developer</h3>
@@ -140,7 +149,7 @@
                 <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
-        <div id="card-7" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
+        <div id="card-7" class="card bg-[#F1F2F4] p-6 rounded-lg flex relative">
             <div >
                 <h2 class="companyName text-[#002C5C] font-semibold text-[18px]">StartupXYZ</h2>
                 <h3 class="jobTittle text-[#64748B] text-[16px]">Full Stack Engineer</h3>
@@ -156,7 +165,7 @@
                 <button class="btn delete border-2 border-gray-200 rounded-full w-12 h-12 flex items-center justify-center"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         </div>
-        <div id="card-8" class="bg-[#F1F2F4] p-6 rounded-lg flex relative">
+        <div id="card-8" class="card bg-[#F1F2F4] p-6 rounded-lg flex relative">
             <div >
                 <h2 class="companyName text-[#002C5C] font-semibold text-[18px]">TechCorp Industries</h2>
                 <h3 class="jobTittle text-[#64748B] text-[16px]">Senior Frontend Developer</h3>
