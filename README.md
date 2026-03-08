@@ -32,4 +32,3 @@ ii.stopPropagation():
 Stops event bubbling or capturing, meaning the event will no longer propagate to the parent element.
 This basically stops progression.
 
-**I'm not good at English, I used Google Translate for translation, so please forgive me if there are any mistakes.**
